@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fijate.ui.maui.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Cuide dos seus olhos!" Style="{StaticResource Headline}" />
+            <Label Text="Dicas e lembretes para manter a saúde ocular" Style="{StaticResource SubHeadline}" />
+
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*">
+                <VerticalStackLayout Grid.Column="0" Grid.Row="0" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="👁️" Style="{StaticResource Icon}" />
+                                <Label Text="Regra 20-20-20" Style="{StaticResource Title}" />
+                            </HorizontalStackLayout>
+                            <Label Grid.Column="0" Grid.Row="1"  
+                                   Text="A cada 20 minutos, olhe para algo a 20 pés (6 metros) de distância por 20 segundos para reduzir a fadiga ocular." />
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="0" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="💧" Style="{StaticResource Icon}" />
+                                <Label Text="Mantenha a hidratação" Style="{StaticResource Title}" />
+                            </HorizontalStackLayout>
+                            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="Pisque conscientemente com frequência enquanto usa telas para evitar o ressecamento ocular." />
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="2" Grid.Row="0" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="🌙" Style="{StaticResource Icon}" />
+                                <Label Text="Luz azul" Style="{StaticResource Title}" />
+                            </HorizontalStackLayout>
+                            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="Use filtros de luz azul ou o modo noturno em seus dispositivos, especialmente à noite." />
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="📏" Style="{StaticResource Icon}" />
+                                <Label Text="Distância adequada" Style="{StaticResource Title}" />
+                            </HorizontalStackLayout>
+                            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="Mantenha uma distância de pelo menos 50-60 cm entre seus olhos e a tela." />
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="1" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="🥕" Style="{StaticResource Icon}" />
+                                <Label Text="Alimentação" Style="{StaticResource Title}" />
+                            </HorizontalStackLayout>
+                            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="Consuma alimentos ricos em vitaminas A, C, E e ômega-3 para manter a saúde ocular." />
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="2" Grid.Row="1" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="🔆" Style="{StaticResource Icon}" />
+                                <Label Text="Ajuste o brilho" Style="{StaticResource Title}" />
+                            </HorizontalStackLayout>
+                            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+                                   Text="O brilho da sua tela deve ser semelhante ao do seu ambiente para reduzir a fadiga visual." />
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+            </Grid>
+
+            <BoxView />
+            <VerticalStackLayout Grid.Column="0" Grid.Row="0" Margin="15">
+                <Border Padding="10">
+                    <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*">
+                        <Label Grid.Column="0" Grid.Row="0"
+                            Text="Configure seus lembretes" Style="{StaticResource SubHeadline}"/>
+
+                        <Label Grid.Column="0" Grid.Row="1" Margin="10,0,0,10"
+                            Text="Estabeleça lembretes para descansar seus olhos durante o uso prolongado de telas." />
+
+                        <Grid Grid.Column="0" Grid.Row="2" ColumnDefinitions="Auto,*" RowDefinitions="*,*,*">
+                            <Label Grid.Column="0" Grid.Row="0" Text="Descanso breve" Style="{StaticResource Title}" />
+                            <Label Grid.Column="0" Grid.Row="1" Text="Exercício ocular" Style="{StaticResource Title}" />
+                            <Label Grid.Column="0" Grid.Row="2" Text="Lembrete de hidratação" Style="{StaticResource Title}" Margin="10, 0, 20, 0" />
+
+                            <Picker Grid.Column="1" Grid.Row="0" x:Name="T0">
+                                <Picker.Items>
+                                    <x:String>A cada 20 minutos (recomendado)</x:String>
+                                    <x:String>A cada 30 minutos</x:String>
+                                    <x:String>A cada 45 minutos</x:String>
+                                    <x:String>A cada hora</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Picker Grid.Column="1" Grid.Row="1" x:Name="T1">
+                                <Picker.Items>
+                                    <x:String>A cada 20 minutos (recomendado)</x:String>
+                                    <x:String>A cada 30 minutos</x:String>
+                                    <x:String>A cada 45 minutos</x:String>
+                                    <x:String>A cada hora</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Picker Grid.Column="1" Grid.Row="2" x:Name="T2">
+                                <Picker.Items>
+                                    <x:String>A cada 20 minutos (recomendado)</x:String>
+                                    <x:String>A cada 30 minutos</x:String>
+                                    <x:String>A cada 45 minutos</x:String>
+                                    <x:String>A cada hora</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Grid>
+
+                        <Button Grid.Column="0" Grid.Row="3" Text="Ativar lembretes" Clicked="OnButtonClicked" />
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*">
+                <VerticalStackLayout Grid.Column="0" Grid.Row="0" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <Label Grid.Column="0" Grid.Row="0" Text="Exercício de foco" Style="{StaticResource Title}" />
+                            <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="10,0,0,10">
+                                <Label Text="1. Segure seu polegar a cerca de 25 cm do seu rosto" />
+                                <Label Text="2. Foque a visão no seu dedo por 5 segundos" />
+                                <Label Text="3. Olhe para algo distante por 5 segundos" />
+                                <Label Text="4. Repita 10 vezes" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="0" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <Label Grid.Column="0" Grid.Row="0" Text="Rotação ocular" Style="{StaticResource Title}" />
+                            <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="10,0,0,10">
+                                <Label Text="1. Sente-se com a coluna reta" />
+                                <Label Text="2. Mova seus olhos em círculos no sentido horário" />
+                                <Label Text="3. Realize 10 rotações" />
+                                <Label Text="4. Repita no sentido anti-horário" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <Label Grid.Column="0" Grid.Row="0" Text="Palming" Style="{StaticResource Title}" />
+                            <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="10,0,0,10">
+                                <Label Text="1. Esfregue suas mãos até aquecê-las" />
+                                <Label Text="2. Coloque as palmas sobre seus olhos fechados" />
+                                <Label Text="3. Sinta a escuridão e o calor" />
+                                <Label Text="4. Mantenha por 30 segundos respirando profundamente" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="1" Margin="15">
+                    <BoxView />
+                    <Border Padding="10">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <Label Text="Piscar consciente" Style="{StaticResource Title}" />
+                            <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="10,0,0,10">
+                                <Label Text="1. Pisque completamente 10 vezes" />
+                                <Label Text="2. Feche os olhos e descanse por 20 segundos" />
+                                <Label Text="3. Abra os olhos e pisque normalmente" />
+                                <Label Text="4. Repita a cada hora durante o uso de telas" />
+                            </VerticalStackLayout>                            
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
